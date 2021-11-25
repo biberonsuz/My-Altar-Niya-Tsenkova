@@ -11,6 +11,11 @@ html, body {
     height:100vh;
 }
 body {
+    width:calc(100% - 4vh);
+    height:calc(100% - 4vh);
+    margin:2vh;
+    overflow:none;
+
     font-family: Helvetica, Arial, sans-serif;
     text-align: center;
     background: white;
@@ -21,13 +26,13 @@ body {
 button {
     background: black;
     border: none;
-    padding:2vh;
-    font-size:3vh;
+    padding:4vh;
+    font-size:4vh;
     color:white;
     font-family: inherit;
 }
 h1 {
     display: none;
     padding:1vh;
-    font-size:3vh;
+    font-size:4vh;
 }

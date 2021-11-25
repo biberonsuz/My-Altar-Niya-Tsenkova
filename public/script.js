@@ -52,7 +52,7 @@ let quotes =
 '"The only difference between ordinary and extraordinary is that little extra.” – Jimmy Johnson',
 '"If you work on something a little bit every day, you end up with something that is massive.” – Kenneth Goldsmith',
 '"At any given moment you have the power to say: this is not how the story is going to end.” – Unknown',
-'"Amateus sit around and wait for inspiration. The rest of us just get up and go to work.” – Stephen King',
+'"Amateurs sit around and wait for inspiration. The rest of us just get up and go to work.” – Stephen King',
 '"Nothing will work unless you do.” – Maya Angelou',
 '"Sometimes when you’re in a dark place you think you’ve been buried but you’ve actually been planted.” – Christine Caine',
 '"Everyone has inside them a piece of good news. The good news is you don’t know how great you can be! How much you can love! What you can accomplish! And what your potential is.” – Anne Frank',
@@ -65,19 +65,20 @@ let quotes =
 '"Begin anywhere.” – John Cage']
 
 button.addEventListener('click', () => {
+    let randomise = Math.floor(Math.random()*quotes.length)
     $(button).fadeOut(animationDuration)
     setTimeout(function(){ 
         $(text).fadeIn(animationDuration)
-        text.innerHTML = quotes[Math.floor(Math.random()*quotes.length)]
-    }, animationDuration);
+        text.innerHTML = quotes[randomise]
+    }, animationDuration+50);
     
     //go back to the start button after 15 secs
     setTimeout(function(){ 
         $(text).fadeOut(animationDuration)
         setTimeout(function(){ 
             $(button).fadeIn(animationDuration)
-            text.innerHTML = quotes[Math.floor(Math.random()*quotes.length)]
-        }, animationDuration);
+            text.innerHTML = ''
+        }, animationDuration+50);
        
     }, 15000);
 })
