@@ -1,0 +1,27 @@
+* {
+    padding:0;
+    margin:0;
+}
+html, body {
+    width:100vw;
+    height:100vh;
+}
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    text-align: center;
+    background: white;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+button {
+    background: black;
+    border: none;
+    padding:1vh;
+    font-size:3vh;
+    color:white;;
+}
+h1 {
+    padding:1vh;
+    font-size:3vh;
+}
