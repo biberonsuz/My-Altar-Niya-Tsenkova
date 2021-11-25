@@ -1,7 +1,7 @@
 const button = document.querySelector('button')
 const text = document.querySelector('h1')
 
-const animationDuration = 2 * 1000 //2 mins
+const animationDuration = 1.5 * 1000 //2 mins
 
 let quotes = 
 ['“All our dreams can come true, if we have the courage to pursue them.” – Walt Disney', 
@@ -64,13 +64,15 @@ let quotes =
 '"Wherever you go, go with all your heart” – Confucius',
 '"Begin anywhere.” – John Cage']
 
-button.addEventListener('click', () => {
+button.addEventListener('click', displayQuotes)
+function displayQuotes(){
+    button.removeEventListener('click', displayQuotes)
     let randomise = Math.floor(Math.random()*quotes.length)
     $(button).fadeOut(animationDuration)
     setTimeout(function(){ 
         $(text).fadeIn(animationDuration)
         text.innerHTML = quotes[randomise]
-    }, animationDuration+50);
+    }, animationDuration+500);
     
     //go back to the start button after 15 secs
     setTimeout(function(){ 
@@ -78,8 +80,8 @@ button.addEventListener('click', () => {
         setTimeout(function(){ 
             $(button).fadeIn(animationDuration)
             text.innerHTML = ''
-        }, animationDuration+50);
-       
+            button.addEventListener('click', displayQuotes)
+        }, animationDuration+500);
     }, 15000);
-}, {once : true})
+}
 
