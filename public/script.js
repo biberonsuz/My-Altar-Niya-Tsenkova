@@ -81,5 +81,5 @@ button.addEventListener('click', () => {
         }, animationDuration+50);
        
     }, 15000);
-})
+}, {once : true})
 
