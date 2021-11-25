@@ -6,10 +6,10 @@ let sentences = ['Sentence 1', 'Sentence 2', 'Sentence 3', 'Sentence 4', 'Senten
 button.addEventListener('click', () => {
     text.innerHTML = sentences[Math.floor(Math.random()*sentences.length)]
     button.style.display = 'none'
+    //go back to the start button after 15 secs
     setTimeout(function(){ 
         text.innerHTML = ''
         button.style.display = 'block'
-    }, 10000);
+    }, 15000);
 })
 
-//goes back to the start after 10-20 secs
