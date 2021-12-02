@@ -1,5 +1,8 @@
+const body = document.querySelector('body')
 const button = document.querySelector('button')
 const text = document.querySelector('h1')
+const buttonWrapper = document.querySelector('.button.wrapper')
+const textWrapper = document.querySelector('.text.wrapper')
 
 const animationDuration = 1.5 * 1000 //2 mins
 
@@ -68,17 +71,17 @@ button.addEventListener('click', displayQuotes)
 function displayQuotes(){
     button.removeEventListener('click', displayQuotes)
     let randomise = Math.floor(Math.random()*quotes.length)
-    $(button).fadeOut(animationDuration)
+    $(buttonWrapper).fadeOut(animationDuration)
     setTimeout(function(){ 
-        $(text).fadeIn(animationDuration)
+        $(textWrapper).fadeIn(animationDuration)
         text.innerHTML = quotes[randomise]
     }, animationDuration+500);
     
     //go back to the start button after 15 secs
     setTimeout(function(){ 
-        $(text).fadeOut(animationDuration)
+        $(textWrapper).fadeOut(animationDuration)
         setTimeout(function(){ 
-            $(button).fadeIn(animationDuration)
+            $(buttonWrapper).fadeIn(animationDuration)
             text.innerHTML = ''
             button.addEventListener('click', displayQuotes)
         }, animationDuration+500);

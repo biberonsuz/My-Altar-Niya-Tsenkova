@@ -9,13 +9,9 @@
 html, body {
     width:100vw;
     height:100vh;
+    overflow: hidden;
 }
 body {
-    width:calc(100% - 4vh);
-    height:calc(100% - 4vh);
-    margin:2vh;
-    overflow:none;
-
     font-family: Helvetica, Arial, sans-serif;
     text-align: center;
     background: white;
@@ -23,23 +19,36 @@ body {
     justify-content: center;
     align-items: center;
 }
+.wrapper {
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding:5em;
+}
+.text {
+    display:none;
+    box-sizing: border-box;
+    padding:2.5em;
+    width:100%;
+}
 button {
     background: black;
     border: none;
-    padding:4vh;
-    font-size:4vh;
+    padding:1em;
+    font-size:4em;
     color:white;
     font-family: inherit;
-    border-radius: 8vh;
+    border-radius: 6em;
 
-    filter: drop-shadow(0px 0px 5vh black);
+    filter: drop-shadow(0px 0px 2.5em black);
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 button:active {
-    filter: drop-shadow(0px 0px 5vh grey);
+    filter: drop-shadow(0px 0px 2.5em grey);
 }
 h1 {
-    display: none;
-    padding:1vh;
-    font-size:4vh;
-    filter: drop-shadow(0px 0px 5vh grey);
+    font-size:4em;
+    line-height:1.3334;
+    filter: drop-shadow(0px 0px 2.5em grey);
 }
