@@ -4,7 +4,7 @@ const text = document.querySelector('h1')
 const buttonWrapper = document.querySelector('.button.wrapper')
 const textWrapper = document.querySelector('.text.wrapper')
 
-const animationDuration = 1.5 * 1000 //2 mins
+const animationDuration = 1.5 * 1000
 
 let quotes = 
 ['“All our dreams can come true, if we have the courage to pursue them.” – Walt Disney', 
@@ -73,8 +73,8 @@ function displayQuotes(){
     let randomise = Math.floor(Math.random()*quotes.length)
     $(buttonWrapper).fadeOut(animationDuration)
     setTimeout(function(){ 
-        $(textWrapper).fadeIn(animationDuration)
         text.innerHTML = quotes[randomise]
+        $(textWrapper).fadeIn(animationDuration)
     }, animationDuration+500);
     
     //go back to the start button after 15 secs
