@@ -23,13 +23,13 @@ button {
     background: black;
     border: none;
     padding:1em;
-    font-size:4em;
+    font-size:3.5em;
     color:white;
     font-family: inherit;
     border-radius: 6em;
 }
 h1 {
-    font-size:4em;
+    font-size:3.5em;
     line-height:1.3334;
 }
 .wrapper {
